@@ -30,12 +30,12 @@ endif
 
 " Interface  "{{{1
 
-let s:prefix = get(g:, 'textobj_parameter_default_key_mappings_prefix', '')
+let s:seq = get(g:, 'textobj_parameter_key_sequence', ',')
 
 call textobj#user#plugin('parameter', {
 \      '-': {
-\        'select-i': "i" . s:prefix . ",",  '*select-i-function*': 'textobj#parameter#select_i',
-\        'select-a': "a" . s:prefix . ",",  '*select-a-function*': 'textobj#parameter#select_a',
+\        'select-i': "i" . s:seq,  '*select-i-function*': 'textobj#parameter#select_i',
+\        'select-a': "a" . s:seq,  '*select-a-function*': 'textobj#parameter#select_a',
 \      }
 \    })
 
